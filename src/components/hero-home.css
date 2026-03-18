@@ -39,11 +39,11 @@
 
   background: linear-gradient(
     90deg,
-    #7c7c7c,
+    #65d4f0,
+    #2d2a2a,
+    #db5858,
     #000000,
-    #7c7c7c,
-    #000000,
-    #7c7c7c
+    #73d0fb
   );
   background-size: 300% 100%;
   -webkit-background-clip: text;
@@ -65,7 +65,20 @@
   }
 }
 
+.hero-title:hover {
+  animation: shake 0.4s ease-in-out;
+  cursor: pointer;
+}
 
+/* Smooth shake */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
 
 /* HERO DESCRIPTION */
 
