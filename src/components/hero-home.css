@@ -79,12 +79,9 @@
   background:linear-gradient(90deg,#64bfff,#ff6262);
 }
 
-/* .hero-btn:hover{
-  background:black;
-  color:white;
-  transform:translateY(-3px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.2);
-} */
+.hero-btn:hover{
+  scale: 1.1;cursor: pointer;
+}
 
 
 
