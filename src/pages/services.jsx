@@ -58,7 +58,7 @@ function Services() {
         </div>
         <div className="services-item">
           <div className="services-item-header">
-            04
+            05
             <CiLocationArrow1 size={30} className="services-item-arrow" />
           </div>
           <div className="services-item-title">Laptop Accessories</div>
