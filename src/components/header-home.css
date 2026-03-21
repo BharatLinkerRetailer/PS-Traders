@@ -133,14 +133,34 @@
   color: #667eea;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Mobile Menu Styles */
 @media (max-width: 768px) {
   .site-header {
-    padding: 12px 15px;
+    padding: 12px 15px;background-color: #17153B;
   }
 
   .container {
     padding: 0 15px;
+  background-color: #17153B;
   }
 
   .logo-text {
@@ -148,7 +168,7 @@
   }
 
   .hamburger-menu {
-    display: flex;
+    display: flex;color: white;
     align-items: center;
   }
 
@@ -160,7 +180,7 @@
     height: 0;
     flex-direction: column;
     gap: 0;
-    background-color: #ffffff;
+  background-color: #17153B;
     overflow: hidden;
     transition: height 0.3s ease;
     padding: 0;
@@ -171,21 +191,21 @@
     height: calc(100vh - 60px);
     padding: 20px 0;
     overflow-y: auto;
+    display: flex;align-items: center;
   }
 
   .menu-item {
     padding: 18px 20px;
     font-size: 16px;
     margin: 0;
+    width: 100%;border: 1px solid white;
   }
 
   .menu-item::after {
     display: none;
   }
 
-  .menu-item:hover {
-    background-color: #f5f5f5;
-  }
+  
 
   .actions {
     gap: 15px;
@@ -203,6 +223,8 @@
 
   .container {
     padding: 0 10px;
+    
+  background-color: #17153B;
   }
 
   .logo-text {
