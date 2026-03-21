@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./hero-home.css";
-import img1 from "../assets/img1.jpg";
+import i1 from "../assets/i1.jpg";
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
   const navigate = useNavigate();
+  
 
   const images = [
     "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/r/p/w/-original-imahg5fxzmyzbkv8.jpeg?q=70",
@@ -17,11 +18,7 @@ function Hero() {
   const [index, setIndex] = useState(0);
 
   return (
-    <section className="hero">
-      {/* Background */}
-      <div className="grid-bg">
-        <img src={img1} alt="background" />
-      </div>
+    <div className="hero">
 
       <div className="hero-content">
         <h1 className="hero-title">Innovative Tech Gear</h1>
@@ -44,15 +41,22 @@ function Hero() {
             className="carousel-track"
             style={{ transform: `translateX(-${index * 33.33}%)` }}
           >
-            {images.map((img, i) => (
-              <div className="product-img" key={i}>
-                <img src={img} alt={`product-${i}`} />
-              </div>
-            ))}
+            {images.map((img, i) => {
+              const isCenter = i === index + 1; // middle item
+
+              return (
+                <div
+                  className={`product-img ${isCenter ? "active" : ""}`}
+                  key={i}
+                >
+                  <img src={img} alt={`product-${i}`} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

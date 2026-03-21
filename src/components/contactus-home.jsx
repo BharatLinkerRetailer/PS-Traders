@@ -29,7 +29,6 @@ const Contact = () => {
 
       <div className="contact-header">
         <h2>Contact Us</h2>
-        <p className="subtitle">Get in Touch</p>
       </div>
 
       <div className="contact-container">
@@ -90,12 +89,12 @@ const Contact = () => {
 
         </form>
 
-        <div className="contact-info">
+        {/* <div className="contact-info">
           <p>
             Have a query or need more information? Feel free to contact us via
             the form below. Our team is ready to assist you.
           </p>
-        </div>
+        </div> */}
 
       </div>
 

@@ -117,133 +117,151 @@ function Product() {
 
 const styles = {
   container: {
-    padding: "20px",
-    marginTop: "30px",
-    marginBottom: "30px",
-    fontFamily: '"Segoe UI", Tahoma, Geneva, sans-serif',
-    maxWidth: "1200px",
-    margin: "30px auto"
+    padding: "40px 20px",
+    marginTop: "60px",
+    marginBottom: "40px",
+    fontFamily: "'Madefor Text', 'Segoe UI', Tahoma, Geneva, sans-serif",
+    maxWidth: "1400px",
+    margin: "60px auto 40px"
   },
   heading: {
     textAlign: "center",
-    marginBottom: "8px",
-    fontSize: "32px",
-    fontWeight: "600",
-    color: "#000"
+    marginBottom: "12px",
+    fontSize: "clamp(32px, 6vw, 56px)",
+    fontWeight: "800",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    letterSpacing: "-1px"
   },
   subtitle: {
     textAlign: "center",
     color: "#666",
-    fontSize: "14px",
-    marginBottom: "30px"
+    fontSize: "16px",
+    marginBottom: "35px"
   },
   filterContainer: {
     display: "flex",
     justifyContent: "center",
-    gap: "10px",
-    marginBottom: "25px",
+    gap: "12px",
+    marginBottom: "35px",
     flexWrap: "wrap"
   },
   filterBtn: {
-    padding: "10px 20px",
-    border: "1px solid #000",
+    padding: "12px 28px",
+    border: "2px solid #ddd",
     cursor: "pointer",
-    borderRadius: "5px",
-    fontWeight: "500",
+    borderRadius: "8px",
+    fontWeight: "600",
     fontSize: "14px",
-    transition: "all 0.2s ease",
-    outline: "none"
+    transition: "all 0.3s ease",
+    outline: "none",
+    fontFamily: "'Madefor Text', sans-serif",
+    backgroundColor: "#fff",
+    color: "#333"
   },
   filterBtnActive: {
-    backgroundColor: "#000",
-    color: "#fff"
+    backgroundColor: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    color: "#fff",
+    borderColor: "#667eea",
+    boxShadow: "0 4px 15px rgba(102, 126, 234, 0.3)"
   },
   filterBtnInactive: {
     backgroundColor: "#fff",
-    color: "#000"
+    color: "#333",
+    borderColor: "#ddd"
   },
   resultCount: {
     textAlign: "center",
     color: "#666",
     fontSize: "14px",
-    marginBottom: "20px"
+    marginBottom: "30px"
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-    gap: "20px"
+    gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+    gap: "24px"
   },
   card: {
-    border: "1px solid #ddd",
-    padding: "15px",
-    borderRadius: "10px",
+    border: "1px solid #e0e0e0",
+    padding: "16px",
+    borderRadius: "12px",
     textAlign: "center",
-    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
     transition: "all 0.3s ease",
     cursor: "pointer",
     backgroundColor: "#fff"
   },
   cardHover: {
-    boxShadow: "0 8px 16px rgba(0,0,0,0.12)",
-    transform: "translateY(-4px)"
+    boxShadow: "0 12px 32px rgba(102, 126, 234, 0.15)",
+    transform: "translateY(-8px)",
+    borderColor: "#667eea"
   },
   image: {
     width: "100%",
-    height: "200px",
-    objectFit: "cover",
+    height: "220px",
+    objectFit: "contain",
     borderRadius: "8px",
-    backgroundColor: "#f5f5f5"
+    backgroundColor: "#f8f9fa",
+    padding: "10px"
   },
   imagePlaceholder: {
     width: "100%",
-    height: "200px",
-    backgroundColor: "#f5f5f5",
+    height: "220px",
+    backgroundColor: "#f8f9fa",
     borderRadius: "8px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center"
   },
   placeholderText: {
-    color: "#999",
-    fontSize: "14px",
+    color: "#a0a0a0",
+    fontSize: "13px",
     margin: "0"
   },
   productName: {
-    fontSize: "16px",
-    fontWeight: "600",
-    margin: "12px 0 8px",
-    color: "#000"
+    fontSize: "15px",
+    fontWeight: "700",
+    margin: "14px 0 8px",
+    color: "#333"
   },
   category: {
     color: "#999",
-    fontSize: "12px",
-    fontWeight: "500",
-    letterSpacing: "0.5px",
-    margin: "0 0 8px"
+    fontSize: "11px",
+    fontWeight: "600",
+    letterSpacing: "0.8px",
+    margin: "0 0 10px",
+    textTransform: "uppercase"
   },
   price: {
-    fontWeight: "700",
+    fontWeight: "800",
     fontSize: "18px",
-    margin: "10px 0",
-    color: "#000"
+    margin: "12px 0",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text"
   },
   button: {
-    padding: "10px 16px",
+    padding: "11px 18px",
     border: "none",
-    backgroundColor: "#000",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
     color: "#fff",
-    borderRadius: "5px",
+    borderRadius: "8px",
     cursor: "pointer",
-    fontWeight: "600",
-    fontSize: "14px",
-    transition: "all 0.2s ease",
-    width: "100%"
+    fontWeight: "700",
+    fontSize: "13px",
+    transition: "all 0.3s ease",
+    width: "100%",
+    fontFamily: "'Madefor Text', sans-serif",
+    boxShadow: "0 4px 12px rgba(102, 126, 234, 0.3)"
   },
   noResults: {
     gridColumn: "1 / -1",
     textAlign: "center",
     color: "#999",
-    padding: "40px 20px",
+    padding: "60px 20px",
     fontSize: "16px"
   }
 };

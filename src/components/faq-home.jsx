@@ -32,27 +32,27 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq">
+    <section className="home-faq">
       <h2 className="font_2 wixui-rich-text__text" style={{ fontSize: "69px" }}>
         FAQs
       </h2>
-      <div className="faq-header">
+      <div className="home-faq__header">
         <h2>Frequently asked questions</h2>
-        <p className="faq-description">
+        <p className="home-faq__description">
           Find answers to common queries about our products, services and tech
           solutions. If you have more questions feel free to reach out to us.
         </p>
       </div>
 
-      <div className="faq-list">
+      <div className="home-faq__list">
         {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <button className="faq-question" onClick={() => toggle(index)}>
+          <div key={index} className="home-faq__item">
+            <div className="home-faq__question" onClick={() => toggle(index)}>
               {faq.question}
-              <span>{active === index ? "-" : "+"}</span>
-            </button>
+              {/* <span>{active === index ? "-" : "+"}</span> */}
+            </div>
 
-            {active === index && <p className="faq-answer">{faq.answer}</p>}
+            {active === index && <p className="home-faq__answer">{faq.answer}</p>}
           </div>
         ))}
       </div>

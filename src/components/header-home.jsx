@@ -1,40 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./header-home.css";
 import { FaCameraRetro } from "react-icons/fa6";
-function Header() {
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClose } from "react-icons/md";
 
+function Header() {
   const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleNavClick = (path) => {
+    navigate(path);
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="site-header">
       <div className="container">
-
         <div className="logo">
           <div className="logo-text">PS. Traders</div>
         </div>
 
-        <div className="menu">
-          <div className="menu-item" onClick={() => navigate("/")}>
+        <div className={`menu ${mobileMenuOpen ? "menu-open" : ""}`}>
+          <div className="menu-item" onClick={() => handleNavClick("/")}>
             Home
           </div>
-
-          <div className="menu-item" onClick={() => navigate("/product")}>
+          <div className="menu-item" onClick={() => handleNavClick("/product")}>
             Products
           </div>
-          
-          <div className="menu-item" onClick={() => navigate("/service")}>
+          <div className="menu-item" onClick={() => handleNavClick("/service")}>
             Service
           </div>
-          <div className="menu-item" onClick={() => navigate("/about")}>
+          <div className="menu-item" onClick={() => handleNavClick("/about")}>
             About Us
           </div>
         </div>
 
         <div className="actions">
-          <div className="login-btn"><FaCameraRetro size={20}/></div>
+          <div 
+            className="hamburger-menu" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <MdClose size={24} />
+            ) : (
+              <GiHamburgerMenu size={24} />
+            )}
+          </div>
         </div>
-
       </div>
     </header>
   );
